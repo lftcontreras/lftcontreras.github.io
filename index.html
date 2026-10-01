@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luis Felipe Tarouquela Contreras</title>
+<meta name="description" content="Applied economist working on taxation, inequality and public policy evaluation in Brazil. MSc candidate in Economics at PPGE/UFF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: two columns on wide screens — a quiet identity rail on the left (photo, name, profile links) and a long reading column on the right; one column on phones. */
+:root{
+  --bg:#F5F6F3;
+  --surface:#FFFFFF;
+  --ink:#17201E;
+  --muted:#5A6663;
+  --rule:#D9DEDA;
+  --accent:#1E5A68;
+  --accent-soft:#E3EDEF;
+  --brass:#9A6B22;
+  --f-display:"Newsreader", Georgia, "Times New Roman", serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.4rem; --s3:1.85rem; --s4:2.6rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101716; --surface:#16201E; --ink:#E3EAE7; --muted:#9AA8A4; --rule:#2A3633;
+    --accent:#86BCC8; --accent-soft:#1C2E32; --brass:#D6A55A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101716; --surface:#16201E; --ink:#E3EAE7; --muted:#9AA8A4; --rule:#2A3633;
+  --accent:#86BCC8; --accent-soft:#1C2E32; --brass:#D6A55A; color-scheme:dark;
+}
+:root:not([data-lang="pt"]) .pt{display:none!important}
+:root[data-lang="pt"] .en{display:none!important}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;text-wrap:balance;margin:0;line-height:1.2}
+p{margin:0}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:clamp(24px,5vw,56px) 40px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:clamp(32px,6vw,80px)}
+@media (max-width:860px){.wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* Identity rail */
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 32px);align-self:start;display:flex;flex-direction:column;gap:20px}
+@media (max-width:860px){.rail{position:static}}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lang{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{font:500 var(--s-1)/1 var(--f-mono);letter-spacing:.06em;border:0;background:transparent;color:var(--muted);padding:7px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.photo{width:112px;height:112px;border-radius:50%;object-fit:cover;max-width:100%;border:1px solid var(--rule)}
+.name{font-size:var(--s3);font-weight:500;letter-spacing:-.01em}
+.role{color:var(--muted);font-size:.95rem}
+.loc{font:400 var(--s-1)/1.4 var(--f-mono);color:var(--muted);letter-spacing:.02em}
+.ids{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.ids li{border-bottom:1px solid var(--rule)}
+.ids a{display:flex;justify-content:space-between;gap:12px;padding:9px 0;text-decoration:none;color:var(--ink)}
+.ids a:hover .k{color:var(--accent)}
+.ids .k{font-weight:500}
+.ids .v{font:400 var(--s-1)/1.6 var(--f-mono);color:var(--muted);overflow-wrap:anywhere;text-align:right}
+@media (max-width:860px){.ids{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));column-gap:24px}}
+
+/* Reading column */
+main{min-width:0;display:flex;flex-direction:column;gap:clamp(44px,6vw,64px)}
+.lede{font-family:var(--f-display);font-size:clamp(1.45rem,2.6vw,1.95rem);line-height:1.35;font-weight:400;max-width:34ch}
+.lede em{font-style:italic;color:var(--accent)}
+.intro{display:flex;flex-direction:column;gap:18px}
+.intro p.body{max-width:65ch;color:var(--ink)}
+section{display:flex;flex-direction:column;gap:20px}
+.eyebrow{font:500 var(--s-1)/1 var(--f-mono);text-transform:uppercase;letter-spacing:.12em;color:var(--brass)}
+h2{font-size:var(--s3)}
+.sechead{display:flex;flex-direction:column;gap:8px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+
+/* Research areas with JEL codes */
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:2px;background:var(--rule);border:1px solid var(--rule)}
+.area{background:var(--bg);padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.area h3{font-size:var(--s1);font-weight:600}
+.area p{color:var(--muted);font-size:.94rem}
+.jel{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.jel span{font:500 .75rem/1 var(--f-mono);color:var(--accent);background:var(--accent-soft);padding:5px 7px;border-radius:3px;letter-spacing:.03em}
+
+/* Featured dissertation */
+.feature{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px}
+.feature h3{font-size:var(--s2);font-weight:500;line-height:1.25}
+.feature .meta{font:400 var(--s-1)/1.5 var(--f-mono);color:var(--muted)}
+.feature p{max-width:65ch}
+.params{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:14px 24px;margin:4px 0 0;padding:16px 0 0;border-top:1px dashed var(--rule)}
+.params div{min-width:0}
+.params dt{font:500 .72rem/1.3 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.params dd{margin:4px 0 0;font-family:var(--f-display);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.status{align-self:flex-start;font:500 .75rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--brass);border:1px solid currentColor;padding:6px 9px;border-radius:999px}
+
+/* Publications */
+.pubs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.pubs li{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.pubs li:first-child{padding-top:4px}
+.yr{font:500 .9rem/1.5 var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.pt-title{font-family:var(--f-display);font-size:1.12rem;line-height:1.35}
+.auth{color:var(--muted);font-size:.92rem;margin-top:4px}
+.auth b{color:var(--ink);font-weight:600}
+.venue{font-size:.92rem;margin-top:2px}
+.tag{display:inline-block;font:500 .7rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--brass);margin-left:6px;vertical-align:2px}
+h3.sub{font-family:var(--f-body);font-size:var(--s-1);font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px}
+
+/* Timeline-like lists (experience, education) */
+.rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.rows li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+@media (max-width:520px){.rows li,.pubs li{grid-template-columns:minmax(0,1fr);gap:4px}}
+.when{font:400 .85rem/1.6 var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.what{font-weight:600}
+.where{color:var(--muted);font-size:.94rem}
+.desc{font-size:.94rem;margin-top:4px;max-width:62ch}
+
+/* Toolkit */
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px 32px}
+.kit h3{font-family:var(--f-body);font-size:var(--s-1);font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.kit p{font-size:.96rem}
+
+/* Contact */
+.contact{display:flex;flex-direction:column;gap:10px}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.mail code{font:400 1rem/1.4 var(--f-mono);user-select:all;overflow-wrap:anywhere;min-width:0}
+.mail .lbl{font:500 .72rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);width:6.5rem}
+.copy{font:500 .75rem/1 var(--f-mono);letter-spacing:.04em;border:1px solid var(--rule);background:var(--surface);color:var(--ink);padding:7px 10px;border-radius:4px;cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:400 var(--s-1)/1.6 var(--f-mono);color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.lang button{transition:background .15s,color .15s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <aside class="rail" aria-label="Profile">
+    <div class="topbar">
+      <img class="photo" src="photo.jpg" alt="Portrait of Luis Felipe Tarouquela Contreras" width="112" height="112">
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="btn-pt" data-set="pt" aria-pressed="false">PT</button>
+      </div>
+    </div>
+    <div>
+      <h1 class="name">Luis Felipe Tarouquela Contreras</h1>
+      <p class="role en">Applied economist · MSc candidate in Economics, PPGE/UFF</p>
+      <p class="role pt">Economista aplicado · Mestrando em Economia, PPGE/UFF</p>
+    </div>
+    <p class="loc">Niterói, RJ — Brazil · UTC−3</p>
+    <ul class="ids">
+      <li><a href="https://orcid.org/0009-0009-0387-0558"><span class="k">ORCID</span><span class="v">0009-0009-0387-0558</span></a></li>
+      <li><a href="https://scholar.google.com/citations?user=410-obMAAAAJ"><span class="k">Google Scholar</span><span class="v">410-obMAAAAJ</span></a></li>
+      <li><a href="https://authors.repec.org/pro/pco1231/"><span class="k">RePEc</span><span class="v">pco1231</span></a></li>
+      <li><a href="http://lattes.cnpq.br/1313195430227740"><span class="k">Lattes</span><span class="v">1313195430227740</span></a></li>
+      <li><a href="https://www.linkedin.com/in/luisfelipecontreras/"><span class="k">LinkedIn</span><span class="v">/luisfelipecontreras</span></a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="intro" id="about">
+      <p class="lede en">I study who ends up paying for public policy in Brazil, with a focus on <em>indirect taxation</em>, inequality and the evaluation of social programs.</p>
+      <p class="lede pt">Estudo quem de fato paga a conta das políticas públicas no Brasil, com foco em <em>tributação indireta</em>, desigualdade e avaliação de programas sociais.</p>
+      <p class="body en">I am an MSc candidate in Economics at the Graduate Program in Economics of Universidade Federal Fluminense (PPGE/UFF), advised by Prof. Fábio Domingues Waltenberg. My dissertation uses household-budget microsimulation to assess whether the tax cashback created by Brazil's 2023 tax reform can offset the regressivity of consumption taxes. I am also a research fellow at the UFF/SUDECO Observatory of public-policy indicators for intermediate cities in Brazil's Center-West, and a member of the team evaluating the National Program of Oriented Productive Microcredit (PNMPO). Before graduate school I worked in municipal budget planning and execution in Niterói.</p>
+      <p class="body pt">Sou mestrando em Economia no Programa de Pós-Graduação em Economia da Universidade Federal Fluminense (PPGE/UFF), sob orientação do Prof. Fábio Domingues Waltenberg. Minha dissertação usa microssimulação com dados de orçamento familiar para avaliar se o cashback criado pela Reforma Tributária de 2023 consegue compensar a regressividade dos tributos sobre o consumo. Também sou bolsista de pesquisa no Observatório UFF/SUDECO de indicadores de políticas públicas das cidades intermediadoras do Centro-Oeste e integro a equipe de avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO). Antes da pós-graduação, trabalhei com planejamento e execução orçamentária na Prefeitura de Niterói.</p>
+    </div>
+
+    <section id="research" aria-labelledby="h-research">
+      <div class="sechead">
+        <span class="eyebrow en">Research</span><span class="eyebrow pt">Pesquisa</span>
+        <h2 id="h-research"><span class="en">Areas of interest</span><span class="pt">Áreas de interesse</span></h2>
+      </div>
+      <div class="areas">
+        <div class="area">
+          <h3><span class="en">Taxation &amp; inequality</span><span class="pt">Tributação e desigualdade</span></h3>
+          <p class="en">Incidence of consumption taxes, tax reform and compensatory transfers.</p>
+          <p class="pt">Incidência dos tributos sobre consumo, reforma tributária e transferências compensatórias.</p>
+          <div class="jel" aria-label="JEL codes"><span>H22</span><span>H23</span><span>D31</span></div>
+        </div>
+        <div class="area">
+          <h3><span class="en">Policy evaluation</span><span class="pt">Avaliação de políticas públicas</span></h3>
+          <p class="en">Microsimulation and impact evaluation of social and credit programs.</p>
+          <p class="pt">Microssimulação e avaliação de impacto de programas sociais e de crédito.</p>
+          <div class="jel" aria-label="JEL codes"><span>C63</span><span>H43</span><span>I38</span></div>
+        </div>
+        <div class="area">
+          <h3><span class="en">Labor economics</span><span class="pt">Economia do trabalho</span></h3>
+          <p class="en">Gender and racial gaps in pay, public-sector labor markets, commuting time.</p>
+          <p class="pt">Desigualdades de gênero e raça nos salários, setor público, tempo de deslocamento.</p>
+          <div class="jel" aria-label="JEL codes"><span>J31</span><span>J45</span><span>J71</span></div>
+        </div>
+        <div class="area">
+          <h3><span class="en">Regional development</span><span class="pt">Desenvolvimento regional</span></h3>
+          <p class="en">Indicators and monitoring for Brazil's National Regional Development Policy (PNDR).</p>
+          <p class="pt">Indicadores e monitoramento da Política Nacional de Desenvolvimento Regional (PNDR).</p>
+          <div class="jel" aria-label="JEL codes"><span>R58</span><span>R11</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dissertation" aria-labelledby="h-diss">
+      <div class="sechead">
+        <span class="eyebrow en">Work in progress</span><span class="eyebrow pt">Em andamento</span>
+        <h2 id="h-diss"><span class="en">MSc dissertation</span><span class="pt">Dissertação de mestrado</span></h2>
+      </div>
+      <article class="feature">
+        <span class="status en">Defense expected 2026</span><span class="status pt">Defesa prevista em 2026</span>
+        <h3>Cashback Tributário e Regressividade Remanescente <span class="en" style="font-style:italic;color:var(--muted)">(Tax cashback and residual regressivity)</span></h3>
+        <p class="meta">PPGE/UFF · <span class="en">Advisor</span><span class="pt">Orientador</span>: Fábio D. Waltenberg</p>
+        <p class="en">Brazil's tax reform (Constitutional Amendment 132/2023 and Complementary Law 214/2025) replaces five consumption taxes with a dual VAT (CBS and IBS) and returns part of the tax paid to low-income families. Using the 2017–2018 Household Budget Survey (POF/IBGE), the dissertation simulates the new tax burden by income decile and measures how much regressivity remains after the cashback, treating the formality of each consumption channel as the key condition for the refund to reach households.</p>
+        <p class="pt">A Reforma Tributária (EC 132/2023 e LC 214/2025) substitui cinco tributos sobre o consumo por um IVA dual (CBS e IBS) e devolve parte do imposto pago às famílias de baixa renda. Com a POF 2017–2018 (IBGE), a dissertação simula a nova carga tributária por decil de renda e mede quanta regressividade resta após o cashback, tratando a formalização de cada canal de consumo como condição central para que a devolução chegue às famílias.</p>
+        <dl class="params">
+          <div><dt><span class="en">Reference IBS + CBS rate</span><span class="pt">Alíquota de referência IBS + CBS</span></dt><dd>26.5%</dd></div>
+          <div><dt><span class="en">Eligibility</span><span class="pt">Elegibilidade</span></dt><dd><span class="en">≤ ½ minimum wage per capita</span><span class="pt">≤ ½ salário mínimo per capita</span></dd></div>
+          <div><dt><span class="en">Data</span><span class="pt">Dados</span></dt><dd>POF 2017–2018</dd></div>
+          <div><dt><span class="en">Method</span><span class="pt">Método</span></dt><dd><span class="en">Static microsimulation</span><span class="pt">Microssimulação estática</span></dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <section id="publications" aria-labelledby="h-pubs">
+      <div class="sechead">
+        <span class="eyebrow en">Output</span><span class="eyebrow pt">Produção</span>
+        <h2 id="h-pubs"><span class="en">Papers and reports</span><span class="pt">Artigos e relatórios</span></h2>
+      </div>
+      <h3 class="sub"><span class="en">Conference papers</span><span class="pt">Trabalhos em congressos</span></h3>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="yr">2026</span>
+          <div>
+            <p class="pt-title">Raça, território e o custo temporal do deslocamento ao trabalho: evidências do Rio de Janeiro e de São Paulo<span class="tag en">Accepted</span><span class="tag pt">Aceito</span></p>
+            <p class="auth">M. A. X. Silva, D. C. Machado, F. M. Rios, <b>L. F. T. Contreras</b></p>
+            <p class="venue"><span class="en">54th Brazilian Economics Meeting (ANPEC), Foz do Iguaçu</span><span class="pt">54º Encontro Nacional de Economia (ANPEC), Foz do Iguaçu</span></p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2025</span>
+          <div>
+            <p class="pt-title">Disparidades salariais por gênero e raça no setor público brasileiro: evidências de “chão pegajoso” e “teto de vidro”</p>
+            <p class="auth">M. A. X. Silva, <b>L. F. T. Contreras</b>, D. C. Machado</p>
+            <p class="venue"><span class="en">53rd Brazilian Economics Meeting (ANPEC), São Paulo</span><span class="pt">53º Encontro Nacional de Economia (ANPEC), São Paulo</span></p>
+          </div>
+        </li>
+      </ol>
+      <h3 class="sub"><span class="en">Technical reports · UFF/SUDECO Observatory</span><span class="pt">Relatórios técnicos · Observatório UFF/SUDECO</span></h3>
+      <ol class="pubs" reversed>
+        <li><span class="yr">2026</span><div><p class="pt-title">Relatório Anual de Monitoramento da Política Nacional de Desenvolvimento Regional (PNDR)</p><p class="auth">G. Guimarães-Vicente, A. A. P. Brandão, L. M. Muls, O. R. B. Marques, … <b>L. F. T. Contreras</b>, et al.</p></div></li>
+        <li><span class="yr">2026</span><div><p class="pt-title">Composição da cesta de indicadores</p><p class="auth">G. Guimarães-Vicente et al.</p></div></li>
+        <li><span class="yr">2026</span><div><p class="pt-title">Relatório com levantamento das melhores práticas metodológicas de construção de observatórios de políticas públicas</p><p class="auth">G. Guimarães-Vicente et al.</p></div></li>
+        <li><span class="yr">2025</span><div><p class="pt-title">Fórum remoto para validação da cesta de indicadores</p><p class="auth">G. Guimarães-Vicente et al.</p></div></li>
+        <li><span class="yr">2025</span><div><p class="pt-title">Seminário com especialistas da área de conhecimento envolvendo o setor público, a academia e entidades representativas dos setores econômicos</p><p class="auth">G. Guimarães-Vicente et al.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="projects" aria-labelledby="h-proj">
+      <div class="sechead">
+        <span class="eyebrow en">Research projects</span><span class="eyebrow pt">Projetos de pesquisa</span>
+        <h2 id="h-proj"><span class="en">Projects and experience</span><span class="pt">Projetos e experiência</span></h2>
+      </div>
+      <ul class="rows">
+        <li>
+          <span class="when">2025 – <span class="en">present</span><span class="pt">atual</span></span>
+          <div>
+            <p class="what"><span class="en">Research fellow</span><span class="pt">Bolsista de pesquisa</span></p>
+            <p class="where"><span class="en">Observatory of public-policy indicators for intermediate cities in the Center-West (UFF/SUDECO)</span><span class="pt">Observatório de indicadores das políticas públicas das cidades intermediadoras do Centro-Oeste (UFF/SUDECO)</span></p>
+            <p class="desc en">Collection, processing and analysis of regional development indicators; co-author of the annual PNDR monitoring report and technical deliverables.</p>
+            <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2023 – <span class="en">present</span><span class="pt">atual</span></span>
+          <div>
+            <p class="what"><span class="en">Research team member</span><span class="pt">Integrante da equipe de pesquisa</span></p>
+            <p class="where"><span class="en">Evaluation of the National Program of Oriented Productive Microcredit (PNMPO) — UFG, with the Ministry of Labor and Employment</span><span class="pt">Avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO) — UFG, em cooperação com o Ministério do Trabalho e Emprego</span></p>
+            <p class="desc en">Executive and implementation analysis of the program: agents, beneficiaries and bottlenecks.</p>
+            <p class="desc pt">Análise executiva e da implementação do programa: agentes, beneficiários e gargalos.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2024 – <span class="en">present</span><span class="pt">atual</span></span>
+          <div>
+            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span></p>
+            <p class="where"><span class="en">Municipal Secretariat of Cultures, City of Niterói</span><span class="pt">Secretaria Municipal das Culturas, Prefeitura de Niterói</span></p>
+            <p class="desc en">Budget execution (purchase requests, commitment notes), travel allowances, and administrative and budget databases with Excel and Power BI.</p>
+            <p class="desc pt">Execução orçamentária (solicitações de compra, notas de empenho), diárias e passagens, e bases de dados administrativas e orçamentárias em Excel e Power BI.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2021 – 2024</span>
+          <div>
+            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span></p>
+            <p class="where"><span class="en">Municipal Secretariat of Planning (SEPLAG), City of Niterói</span><span class="pt">Secretaria Municipal de Planejamento, Modernização da Gestão e Controle (SEPLAG), Niterói</span></p>
+            <p class="desc en">Municipal budget planning, dashboards in Excel and Power BI, and review of purchase requests and commitment notes across secretariats.</p>
+            <p class="desc pt">Planejamento orçamentário do município, painéis em Excel e Power BI, e análise de solicitações de compra e notas de empenho das secretarias.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" aria-labelledby="h-edu">
+      <div class="sechead">
+        <span class="eyebrow en">Education</span><span class="eyebrow pt">Formação</span>
+        <h2 id="h-edu"><span class="en">Degrees</span><span class="pt">Títulos</span></h2>
+      </div>
+      <ul class="rows">
+        <li><span class="when">2025 – 2026</span><div><p class="what"><span class="en">MSc in Economics (in progress)</span><span class="pt">Mestrado em Economia (em andamento)</span></p><p class="where">Universidade Federal Fluminense — PPGE/UFF</p></div></li>
+        <li><span class="when">2019 – 2020</span><div><p class="what"><span class="en">Graduate specialization in Public Administration</span><span class="pt">Especialização em Administração Pública</span></p><p class="where">Faculdade Única de Ipatinga (FUNIP)</p></div></li>
+        <li><span class="when">2011 – 2018</span><div><p class="what"><span class="en">BA in Economics</span><span class="pt">Bacharelado em Ciências Econômicas</span></p><p class="where">Universidade Federal Fluminense · <span class="en">Tutorial Education Program (PET) fellow, 2012–2014</span><span class="pt">bolsista do PET, 2012–2014</span></p></div></li>
+      </ul>
+    </section>
+
+    <section id="toolkit" aria-labelledby="h-kit">
+      <div class="sechead">
+        <span class="eyebrow en">Toolkit</span><span class="eyebrow pt">Ferramentas</span>
+        <h2 id="h-kit"><span class="en">Data, software and languages</span><span class="pt">Dados, software e idiomas</span></h2>
+      </div>
+      <div class="kit">
+        <div><h3><span class="en">Microdata</span><span class="pt">Microdados</span></h3><p>POF · PNAD Contínua · RAIS</p></div>
+        <div><h3>Software</h3><p>Stata · Excel · Power BI · LaTeX · R · Python · SQL</p></div>
+        <div><h3><span class="en">Languages</span><span class="pt">Idiomas</span></h3><p class="en">Portuguese (native) · English (advanced) · Spanish (advanced)</p><p class="pt">Português (nativo) · Inglês (avançado) · Espanhol (avançado)</p></div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <div class="sechead">
+        <span class="eyebrow en">Contact</span><span class="eyebrow pt">Contato</span>
+        <h2 id="h-contact"><span class="en">Get in touch</span><span class="pt">Fale comigo</span></h2>
+      </div>
+      <div class="contact">
+        <div class="mail"><span class="lbl"><span class="en">Academic</span><span class="pt">Acadêmico</span></span><code id="m1">lftcontreras@id.uff.br</code><button class="copy" type="button" id="copy-1" data-target="m1"><span class="en">Copy</span><span class="pt">Copiar</span></button></div>
+        <div class="mail"><span class="lbl"><span class="en">Personal</span><span class="pt">Pessoal</span></span><code id="m2">lftcontreras@gmail.com</code><button class="copy" type="button" id="copy-2" data-target="m2"><span class="en">Copy</span><span class="pt">Copiar</span></button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="en">Universidade Federal Fluminense · Faculdade de Economia · Niterói, RJ, Brazil · Updated October 2026</span>
+    <span class="pt">Universidade Federal Fluminense · Faculdade de Economia · Niterói, RJ · Atualizado em outubro de 2026</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l==='pt'?'pt-BR':'en');
+    document.getElementById('btn-en').setAttribute('aria-pressed',String(l==='en'));
+    document.getElementById('btn-pt').setAttribute('aria-pressed',String(l==='pt'));
+    try{localStorage.setItem('lftc-lang',l)}catch(e){}
+  }
+  var initial='en';
+  var h=(location.hash||'').replace('#','');
+  if(h==='pt'||h==='en'){initial=h}
+  else{
+    var saved=null;try{saved=localStorage.getItem('lftc-lang')}catch(e){}
+    if(saved==='pt'||saved==='en'){initial=saved}
+    else if((navigator.language||'').toLowerCase().indexOf('pt')===0){initial='pt'}
+  }
+  setLang(initial);
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click',function(){setLang(b.getAttribute('data-set'))});
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.getAttribute('data-target'));
+      var txt=el.textContent;
+      function done(){var lbl=root.getAttribute('data-lang')==='pt'?'Copiado':'Copied';var old=b.innerHTML;b.textContent=lbl;setTimeout(function(){b.innerHTML=old},1600)}
+      function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+      try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
+    });
+  });
+})();
+</script>
+</body>
+</html>
