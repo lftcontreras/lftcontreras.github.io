@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://lftcontreras.github.io/photo.jpg">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,8 @@
   --accent:#86BCC8; --accent-soft:#1C2E32; --brass:#D6A55A; color-scheme:dark;
 }
 :root:not([data-lang="pt"]) .pt{display:none!important}
-:root[data-lang="pt"] .en{display:none!important}
+:root[data-lang="pt"] .en,:root[data-lang="es"] .en{display:none!important}
+:root:not([data-lang="es"]) .es{display:none!important}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
@@ -153,12 +155,13 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
       <div class="lang" role="group" aria-label="Language / Idioma">
         <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
         <button type="button" id="btn-pt" data-set="pt" aria-pressed="false">PT</button>
+        <button type="button" id="btn-es" data-set="es" aria-pressed="false">ES</button>
       </div>
     </div>
     <div>
       <h1 class="name">Luis Felipe Tarouquela Contreras</h1>
       <p class="role en">Applied economist · MSc candidate in Economics, PPGE/UFF</p>
-      <p class="role pt">Economista aplicado · Mestrando em Economia, PPGE/UFF</p>
+      <p class="role pt">Economista aplicado · Mestrando em Economia, PPGE/UFF</p><p class="role es">Economista aplicado · Estudiante de Maestría en Economía, PPGE/UFF</p>
     </div>
     <p class="loc">Niterói, RJ — Brazil · UTC−3</p>
     <ul class="ids">
@@ -175,45 +178,45 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
   <main>
     <div class="intro" id="about">
       <p class="lede en">I study who ends up paying for public policy in Brazil, with a focus on <em>indirect taxation</em>, inequality and the evaluation of social programs.</p>
-      <p class="lede pt">Estudo quem de fato paga a conta das políticas públicas no Brasil, com foco em <em>tributação indireta</em>, desigualdade e avaliação de programas sociais.</p>
+      <p class="lede pt">Estudo quem de fato paga a conta das políticas públicas no Brasil, com foco em <em>tributação indireta</em>, desigualdade e avaliação de programas sociais.</p><p class="lede es">Estudio quién termina pagando las políticas públicas en Brasil, con énfasis en la <em>tributación indirecta</em>, la desigualdad y la evaluación de programas sociales.</p>
       <p class="body en">I am an MSc candidate in Economics at the Graduate Program in Economics of Universidade Federal Fluminense (PPGE/UFF), advised by Prof. Fábio Domingues Waltenberg. My dissertation uses household-budget microsimulation to assess whether the tax cashback created by Brazil's 2023 tax reform can offset the regressivity of consumption taxes. I am also a research fellow at the UFF/SUDECO Observatory of public-policy indicators for intermediate cities in Brazil's Center-West, and a member of the team evaluating the National Program of Oriented Productive Microcredit (PNMPO). Before graduate school I worked in municipal budget planning and execution in Niterói.</p>
-      <p class="body pt">Sou mestrando em Economia no Programa de Pós-Graduação em Economia da Universidade Federal Fluminense (PPGE/UFF), sob orientação do Prof. Fábio Domingues Waltenberg. Minha dissertação usa microssimulação com dados de orçamento familiar para avaliar se o cashback criado pela Reforma Tributária de 2023 consegue compensar a regressividade dos tributos sobre o consumo. Também sou bolsista de pesquisa no Observatório UFF/SUDECO de indicadores de políticas públicas das cidades intermediadoras do Centro-Oeste e integro a equipe de avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO). Antes da pós-graduação, trabalhei com planejamento e execução orçamentária na Prefeitura de Niterói.</p>
+      <p class="body pt">Sou mestrando em Economia no Programa de Pós-Graduação em Economia da Universidade Federal Fluminense (PPGE/UFF), sob orientação do Prof. Fábio Domingues Waltenberg. Minha dissertação usa microssimulação com dados de orçamento familiar para avaliar se o cashback criado pela Reforma Tributária de 2023 consegue compensar a regressividade dos tributos sobre o consumo. Também sou bolsista de pesquisa no Observatório UFF/SUDECO de indicadores de políticas públicas das cidades intermediadoras do Centro-Oeste e integro a equipe de avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO). Antes da pós-graduação, trabalhei com planejamento e execução orçamentária na Prefeitura de Niterói.</p><p class="body es">Soy estudiante de Maestría en Economía en el Programa de Posgrado en Economía de la Universidade Federal Fluminense (PPGE/UFF), bajo la dirección del Prof. Fábio Domingues Waltenberg. Mi tesis utiliza microsimulación con datos de presupuestos familiares para evaluar si la devolución tributaria creada por la Reforma Tributaria de 2023 puede compensar la regresividad de los impuestos al consumo. También soy becario de investigación en el Observatorio UFF/SUDECO de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste e integro el equipo de evaluación del Programa Nacional de Microcrédito Productivo Orientado (PNMPO). Antes del posgrado, trabajé en planificación y ejecución presupuestaria en el Ayuntamiento de Niterói.</p>
     </div>
 
     <section id="research-tools" aria-labelledby="h-tools">
-      <div class="sechead"><h2 id="h-tools"><span class="en">Applied research tools</span><span class="pt">Ferramentas de pesquisa aplicada</span></h2></div>
-      <p class="pt"><a href="tax-incidence-lab/">Laboratório de incidência tributária</a>: código Python testado, método documentado e painel para resultados agregados. Os resultados empíricos da dissertação ainda não estão incorporados.</p>
+      <div class="sechead"><h2 id="h-tools"><span class="en">Applied research tools</span><span class="pt">Ferramentas de pesquisa aplicada</span><span class="es">Herramientas de investigación aplicada</span></h2></div>
+      <p class="pt"><a href="tax-incidence-lab/">Laboratório de incidência tributária</a>: código Python testado, método documentado e painel para resultados agregados. Os resultados empíricos da dissertação ainda não estão incorporados.</p><p class="es"><a href="tax-incidence-lab/es.html">Laboratorio de incidencia tributaria</a>: código Python probado, metodología documentada y un panel de resultados agregados. Las estimaciones empíricas de la tesis aún no están incorporadas.</p>
       <p class="en"><a href="tax-incidence-lab/">Tax incidence lab</a>: tested Python code, documented methods and an aggregate-results dashboard. Dissertation estimates are not yet included.</p>
       <p><a href="curriculo-profissional.html">Currículo profissional · Português</a></p>
     </section>
     <section id="research" aria-labelledby="h-research">
       <div class="sechead">
-        <span class="eyebrow en">Research</span><span class="eyebrow pt">Pesquisa</span>
-        <h2 id="h-research"><span class="en">Areas of interest</span><span class="pt">Áreas de interesse</span></h2>
+        <span class="eyebrow en">Research</span><span class="eyebrow pt">Pesquisa</span><span class="eyebrow es">Investigación</span>
+        <h2 id="h-research"><span class="en">Areas of interest</span><span class="pt">Áreas de interesse</span><span class="es">Áreas de interés</span></h2>
       </div>
       <div class="areas">
         <div class="area">
-          <h3><span class="en">Taxation &amp; inequality</span><span class="pt">Tributação e desigualdade</span></h3>
+          <h3><span class="en">Taxation &amp; inequality</span><span class="pt">Tributação e desigualdade</span><span class="es">Tributación y desigualdad</span></h3>
           <p class="en">Incidence of consumption taxes, tax reform and compensatory transfers.</p>
-          <p class="pt">Incidência dos tributos sobre consumo, reforma tributária e transferências compensatórias.</p>
+          <p class="pt">Incidência dos tributos sobre consumo, reforma tributária e transferências compensatórias.</p><p class="es">Incidencia de los impuestos al consumo, reforma tributaria y transferencias compensatorias.</p>
           <div class="jel" aria-label="JEL codes"><span>H22</span><span>H23</span><span>D31</span></div>
         </div>
         <div class="area">
-          <h3><span class="en">Policy evaluation</span><span class="pt">Avaliação de políticas públicas</span></h3>
+          <h3><span class="en">Policy evaluation</span><span class="pt">Avaliação de políticas públicas</span><span class="es">Evaluación de políticas públicas</span></h3>
           <p class="en">Microsimulation and impact evaluation of social and credit programs.</p>
-          <p class="pt">Microssimulação e avaliação de impacto de programas sociais e de crédito.</p>
+          <p class="pt">Microssimulação e avaliação de impacto de programas sociais e de crédito.</p><p class="es">Microsimulación y evaluación de impacto de programas sociales y de crédito.</p>
           <div class="jel" aria-label="JEL codes"><span>C63</span><span>H43</span><span>I38</span></div>
         </div>
         <div class="area">
-          <h3><span class="en">Labor economics</span><span class="pt">Economia do trabalho</span></h3>
+          <h3><span class="en">Labor economics</span><span class="pt">Economia do trabalho</span><span class="es">Economía laboral</span></h3>
           <p class="en">Gender and racial gaps in pay, public-sector labor markets, commuting time.</p>
-          <p class="pt">Desigualdades de gênero e raça nos salários, setor público, tempo de deslocamento.</p>
+          <p class="pt">Desigualdades de gênero e raça nos salários, setor público, tempo de deslocamento.</p><p class="es">Brechas salariales de género y raza, sector público y tiempo de desplazamiento al trabajo.</p>
           <div class="jel" aria-label="JEL codes"><span>J31</span><span>J45</span><span>J71</span></div>
         </div>
         <div class="area">
-          <h3><span class="en">Regional development</span><span class="pt">Desenvolvimento regional</span></h3>
+          <h3><span class="en">Regional development</span><span class="pt">Desenvolvimento regional</span><span class="es">Desarrollo regional</span></h3>
           <p class="en">Indicators and monitoring for Brazil's National Regional Development Policy (PNDR).</p>
-          <p class="pt">Indicadores e monitoramento da Política Nacional de Desenvolvimento Regional (PNDR).</p>
+          <p class="pt">Indicadores e monitoramento da Política Nacional de Desenvolvimento Regional (PNDR).</p><p class="es">Indicadores y seguimiento de la Política Nacional de Desarrollo Regional (PNDR).</p>
           <div class="jel" aria-label="JEL codes"><span>R58</span><span>R11</span></div>
         </div>
       </div>
@@ -221,37 +224,37 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
 
     <section id="dissertation" aria-labelledby="h-diss">
       <div class="sechead">
-        <span class="eyebrow en">Work in progress</span><span class="eyebrow pt">Em andamento</span>
-        <h2 id="h-diss"><span class="en">MSc dissertation</span><span class="pt">Dissertação de mestrado</span></h2>
+        <span class="eyebrow en">Work in progress</span><span class="eyebrow pt">Em andamento</span><span class="eyebrow es">En curso</span>
+        <h2 id="h-diss"><span class="en">MSc dissertation</span><span class="pt">Dissertação de mestrado</span><span class="es">Tesis de maestría</span></h2>
       </div>
       <article class="feature">
-        <span class="status en">Defense expected 2026</span><span class="status pt">Defesa prevista em 2026</span>
+        <span class="status en">Defense expected 2026</span><span class="status pt">Defesa prevista em 2026</span><span class="status es">Defensa prevista en 2026</span>
         <h3>Cashback Tributário e Regressividade Remanescente <span class="en" style="font-style:italic;color:var(--muted)">(Tax cashback and residual regressivity)</span></h3>
-        <p class="meta">PPGE/UFF · <span class="en">Advisor</span><span class="pt">Orientador</span>: Fábio D. Waltenberg</p>
+        <p class="meta">PPGE/UFF · <span class="en">Advisor</span><span class="pt">Orientador</span><span class="es">Director</span>: Fábio D. Waltenberg</p>
         <p class="en">Brazil's tax reform (Constitutional Amendment 132/2023 and Complementary Law 214/2025) replaces five consumption taxes with a dual VAT (CBS and IBS) and returns part of the tax paid to low-income families. Using the 2017–2018 Household Budget Survey (POF/IBGE), the dissertation simulates the new tax burden by income decile and measures how much regressivity remains after the cashback, treating the formality of each consumption channel as the key condition for the refund to reach households.</p>
-        <p class="pt">A Reforma Tributária (EC 132/2023 e LC 214/2025) substitui cinco tributos sobre o consumo por um IVA dual (CBS e IBS) e devolve parte do imposto pago às famílias de baixa renda. Com a POF 2017–2018 (IBGE), a dissertação simula a nova carga tributária por decil de renda e mede quanta regressividade resta após o cashback, tratando a formalização de cada canal de consumo como condição central para que a devolução chegue às famílias.</p>
+        <p class="pt">A Reforma Tributária (EC 132/2023 e LC 214/2025) substitui cinco tributos sobre o consumo por um IVA dual (CBS e IBS) e devolve parte do imposto pago às famílias de baixa renda. Com a POF 2017–2018 (IBGE), a dissertação simula a nova carga tributária por decil de renda e mede quanta regressividade resta após o cashback, tratando a formalização de cada canal de consumo como condição central para que a devolução chegue às famílias.</p><p class="es">La Reforma Tributaria (EC 132/2023 y LC 214/2025) sustituye cinco impuestos al consumo por un IVA dual (CBS e IBS) y devuelve parte del impuesto pagado a las familias de bajos ingresos. Con la POF 2017–2018 (IBGE), la tesis simula la nueva carga tributaria por decil de ingreso y mide cuánta regresividad permanece tras la devolución, considerando la formalización de cada canal de consumo como una condición central para que la devolución llegue a las familias.</p>
         <dl class="params">
-          <div><dt><span class="en">Reference IBS + CBS rate</span><span class="pt">Alíquota de referência IBS + CBS</span></dt><dd>26.5%</dd></div>
-          <div><dt><span class="en">Eligibility</span><span class="pt">Elegibilidade</span></dt><dd><span class="en">≤ ½ minimum wage per capita</span><span class="pt">≤ ½ salário mínimo per capita</span></dd></div>
-          <div><dt><span class="en">Data</span><span class="pt">Dados</span></dt><dd>POF 2017–2018</dd></div>
-          <div><dt><span class="en">Method</span><span class="pt">Método</span></dt><dd><span class="en">Static microsimulation</span><span class="pt">Microssimulação estática</span></dd></div>
+          <div><dt><span class="en">Reference IBS + CBS rate</span><span class="pt">Alíquota de referência IBS + CBS</span><span class="es">Tasa de referencia IBS + CBS</span></dt><dd>26.5%</dd></div>
+          <div><dt><span class="en">Eligibility</span><span class="pt">Elegibilidade</span><span class="es">Elegibilidad</span></dt><dd><span class="en">≤ ½ minimum wage per capita</span><span class="pt">≤ ½ salário mínimo per capita</span><span class="es">≤ ½ salario mínimo per cápita</span></dd></div>
+          <div><dt><span class="en">Data</span><span class="pt">Dados</span><span class="es">Datos</span></dt><dd>POF 2017–2018</dd></div>
+          <div><dt><span class="en">Method</span><span class="pt">Método</span><span class="es">Método</span></dt><dd><span class="en">Static microsimulation</span><span class="pt">Microssimulação estática</span><span class="es">Microsimulación estática</span></dd></div>
         </dl>
       </article>
     </section>
 
     <section id="publications" aria-labelledby="h-pubs">
       <div class="sechead">
-        <span class="eyebrow en">Output</span><span class="eyebrow pt">Produção</span>
-        <h2 id="h-pubs"><span class="en">Papers and reports</span><span class="pt">Artigos e relatórios</span></h2>
+        <span class="eyebrow en">Output</span><span class="eyebrow pt">Produção</span><span class="eyebrow es">Producción</span>
+        <h2 id="h-pubs"><span class="en">Papers and reports</span><span class="pt">Artigos e relatórios</span><span class="es">Artículos e informes</span></h2>
       </div>
-      <h3 class="sub"><span class="en">Conference papers</span><span class="pt">Trabalhos em congressos</span></h3>
+      <h3 class="sub"><span class="en">Conference papers</span><span class="pt">Trabalhos em congressos</span><span class="es">Trabajos en congresos</span></h3>
       <ol class="pubs" reversed>
         <li>
           <span class="yr">2026</span>
           <div>
-            <p class="pt-title">Raça, território e o custo temporal do deslocamento ao trabalho: evidências do Rio de Janeiro e de São Paulo<span class="tag en">Accepted</span><span class="tag pt">Aceito</span></p>
+            <p class="pt-title">Raça, território e o custo temporal do deslocamento ao trabalho: evidências do Rio de Janeiro e de São Paulo<span class="tag en">Accepted</span><span class="tag pt">Aceito</span><span class="tag es">Aceptado</span></p>
             <p class="auth">M. A. X. Silva, D. C. Machado, F. M. Rios, <b>L. F. T. Contreras</b></p>
-            <p class="venue"><span class="en">54th Brazilian Economics Meeting (ANPEC), Foz do Iguaçu</span><span class="pt">54º Encontro Nacional de Economia (ANPEC), Foz do Iguaçu</span></p>
+            <p class="venue"><span class="en">54th Brazilian Economics Meeting (ANPEC), Foz do Iguaçu</span><span class="pt">54º Encontro Nacional de Economia (ANPEC), Foz do Iguaçu</span><span class="es">54.º Encuentro Nacional de Economía (ANPEC), Foz do Iguaçu</span></p>
           </div>
         </li>
         <li>
@@ -259,11 +262,11 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
           <div>
             <p class="pt-title">Disparidades salariais por gênero e raça no setor público brasileiro: evidências de “chão pegajoso” e “teto de vidro”</p>
             <p class="auth">M. A. X. Silva, <b>L. F. T. Contreras</b>, D. C. Machado</p>
-            <p class="venue"><span class="en">53rd Brazilian Economics Meeting (ANPEC), São Paulo</span><span class="pt">53º Encontro Nacional de Economia (ANPEC), São Paulo</span></p>
+            <p class="venue"><span class="en">53rd Brazilian Economics Meeting (ANPEC), São Paulo</span><span class="pt">53º Encontro Nacional de Economia (ANPEC), São Paulo</span><span class="es">53.er Encuentro Nacional de Economía (ANPEC), São Paulo</span></p>
           </div>
         </li>
       </ol>
-      <h3 class="sub"><span class="en">Technical reports · UFF/SUDECO Observatory</span><span class="pt">Relatórios técnicos · Observatório UFF/SUDECO</span></h3>
+      <h3 class="sub"><span class="en">Technical reports · UFF/SUDECO Observatory</span><span class="pt">Relatórios técnicos · Observatório UFF/SUDECO</span><span class="es">Informes técnicos · Observatorio UFF/SUDECO</span></h3>
       <ol class="pubs" reversed>
         <li><span class="yr">2026</span><div><p class="pt-title">Relatório Anual de Monitoramento da Política Nacional de Desenvolvimento Regional (PNDR)</p><p class="auth">G. Guimarães-Vicente, A. A. P. Brandão, L. M. Muls, O. R. B. Marques, … <b>L. F. T. Contreras</b>, et al.</p></div></li>
         <li><span class="yr">2026</span><div><p class="pt-title">Composição da cesta de indicadores</p><p class="auth">G. Guimarães-Vicente, … <b>L. F. T. Contreras</b>, et al.</p></div></li>
@@ -275,44 +278,44 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
 
     <section id="projects" aria-labelledby="h-proj">
       <div class="sechead">
-        <span class="eyebrow en">Research projects</span><span class="eyebrow pt">Projetos de pesquisa</span>
-        <h2 id="h-proj"><span class="en">Projects and experience</span><span class="pt">Projetos e experiência</span></h2>
+        <span class="eyebrow en">Research projects</span><span class="eyebrow pt">Projetos de pesquisa</span><span class="eyebrow es">Proyectos de investigación</span>
+        <h2 id="h-proj"><span class="en">Projects and experience</span><span class="pt">Projetos e experiência</span><span class="es">Proyectos y experiencia</span></h2>
       </div>
       <ul class="rows">
         <li>
-          <span class="when">2025 – <span class="en">present</span><span class="pt">atual</span></span>
+          <span class="when">2025 – <span class="en">present</span><span class="pt">atual</span><span class="es">actualidad</span></span>
           <div>
-            <p class="what"><span class="en">Research fellow</span><span class="pt">Bolsista de pesquisa</span></p>
-            <p class="where"><span class="en">Observatory of public-policy indicators for intermediate cities in the Center-West (UFF/SUDECO)</span><span class="pt">Observatório de indicadores das políticas públicas das cidades intermediadoras do Centro-Oeste (UFF/SUDECO)</span></p>
+            <p class="what"><span class="en">Research fellow</span><span class="pt">Bolsista de pesquisa</span><span class="es">Becario de investigación</span></p>
+            <p class="where"><span class="en">Observatory of public-policy indicators for intermediate cities in the Center-West (UFF/SUDECO)</span><span class="pt">Observatório de indicadores das políticas públicas das cidades intermediadoras do Centro-Oeste (UFF/SUDECO)</span><span class="es">Observatorio de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste (UFF/SUDECO)</span></p>
             <p class="desc en">Collection, processing and analysis of regional development indicators; co-author of the annual PNDR monitoring report and technical deliverables.</p>
-            <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos.</p>
+            <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos.</p><p class="desc es">Recopilación, procesamiento y análisis de indicadores de desarrollo regional; coautor del informe anual de seguimiento de la PNDR y de informes técnicos.</p>
           </div>
         </li>
         <li>
           <span class="when">2023 – 2025</span>
           <div>
-            <p class="what"><span class="en">Research team member</span><span class="pt">Integrante da equipe de pesquisa</span></p>
-            <p class="where"><span class="en">Evaluation of the National Program of Oriented Productive Microcredit (PNMPO) — UFG, with the Ministry of Labor and Employment</span><span class="pt">Avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO) — UFG, em cooperação com o Ministério do Trabalho e Emprego</span></p>
+            <p class="what"><span class="en">Research team member</span><span class="pt">Integrante da equipe de pesquisa</span><span class="es">Integrante del equipo de investigación</span></p>
+            <p class="where"><span class="en">Evaluation of the National Program of Oriented Productive Microcredit (PNMPO) — UFG, with the Ministry of Labor and Employment</span><span class="pt">Avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO) — UFG, em cooperação com o Ministério do Trabalho e Emprego</span><span class="es">Evaluación del Programa Nacional de Microcrédito Productivo Orientado (PNMPO) — UFG, en cooperación con el Ministerio de Trabajo y Empleo</span></p>
             <p class="desc en">Executive and implementation analysis of the program: agents, beneficiaries and bottlenecks.</p>
-            <p class="desc pt">Análise executiva e da implementação do programa: agentes, beneficiários e gargalos.</p>
+            <p class="desc pt">Análise executiva e da implementação do programa: agentes, beneficiários e gargalos.</p><p class="desc es">Análisis ejecutivo y de implementación del programa: agentes, beneficiarios y obstáculos.</p>
           </div>
         </li>
         <li>
-          <span class="when">2024 – <span class="en">present</span><span class="pt">atual</span></span>
+          <span class="when">2024 – <span class="en">present</span><span class="pt">atual</span><span class="es">actualidad</span></span>
           <div>
-            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span></p>
-            <p class="where"><span class="en">Municipal Secretariat of Cultures, City of Niterói</span><span class="pt">Secretaria Municipal das Culturas, Prefeitura de Niterói</span></p>
+            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span><span class="es">Asesor</span></p>
+            <p class="where"><span class="en">Municipal Secretariat of Cultures, City of Niterói</span><span class="pt">Secretaria Municipal das Culturas, Prefeitura de Niterói</span><span class="es">Secretaría Municipal de Culturas, Ayuntamiento de Niterói</span></p>
             <p class="desc en">Budget execution (purchase requests, commitment notes), travel allowances, and administrative and budget databases with Excel and Power BI.</p>
-            <p class="desc pt">Execução orçamentária (solicitações de compra, notas de empenho), diárias e passagens, e bases de dados administrativas e orçamentárias em Excel e Power BI.</p>
+            <p class="desc pt">Execução orçamentária (solicitações de compra, notas de empenho), diárias e passagens, e bases de dados administrativas e orçamentárias em Excel e Power BI.</p><p class="desc es">Ejecución presupuestaria (solicitudes de compra y compromisos de gasto), viáticos y pasajes, y bases de datos administrativas y presupuestarias en Excel y Power BI.</p>
           </div>
         </li>
         <li>
           <span class="when">2021 – 2024</span>
           <div>
-            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span></p>
-            <p class="where"><span class="en">Municipal Secretariat of Planning (SEPLAG), City of Niterói</span><span class="pt">Secretaria Municipal de Planejamento, Modernização da Gestão e Controle (SEPLAG), Niterói</span></p>
+            <p class="what"><span class="en">Advisor</span><span class="pt">Assessor</span><span class="es">Asesor</span></p>
+            <p class="where"><span class="en">Municipal Secretariat of Planning (SEPLAG), City of Niterói</span><span class="pt">Secretaria Municipal de Planejamento, Modernização da Gestão e Controle (SEPLAG), Niterói</span><span class="es">Secretaría Municipal de Planificación, Modernización de la Gestión y Control (SEPLAG), Niterói</span></p>
             <p class="desc en">Municipal budget planning, dashboards in Excel and Power BI, and review of purchase requests and commitment notes across secretariats.</p>
-            <p class="desc pt">Planejamento orçamentário do município, painéis em Excel e Power BI, e análise de solicitações de compra e notas de empenho das secretarias.</p>
+            <p class="desc pt">Planejamento orçamentário do município, painéis em Excel e Power BI, e análise de solicitações de compra e notas de empenho das secretarias.</p><p class="desc es">Planificación presupuestaria municipal, paneles en Excel y Power BI, y análisis de solicitudes de compra y compromisos de gasto de las secretarías.</p>
           </div>
         </li>
       </ul>
@@ -320,43 +323,43 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
 
     <section id="education" aria-labelledby="h-edu">
       <div class="sechead">
-        <span class="eyebrow en">Education</span><span class="eyebrow pt">Formação</span>
-        <h2 id="h-edu"><span class="en">Degrees</span><span class="pt">Títulos</span></h2>
+        <span class="eyebrow en">Education</span><span class="eyebrow pt">Formação</span><span class="eyebrow es">Formación</span>
+        <h2 id="h-edu"><span class="en">Degrees</span><span class="pt">Títulos</span><span class="es">Títulos</span></h2>
       </div>
       <ul class="rows">
-        <li><span class="when">2025 – 2026</span><div><p class="what"><span class="en">MSc in Economics (in progress)</span><span class="pt">Mestrado em Economia (em andamento)</span></p><p class="where">Universidade Federal Fluminense — PPGE/UFF</p></div></li>
-        <li><span class="when">2019 – 2020</span><div><p class="what"><span class="en">Graduate specialization in Public Administration</span><span class="pt">Especialização em Administração Pública</span></p><p class="where">Faculdade Única de Ipatinga (FUNIP)</p></div></li>
-        <li><span class="when">2012 – 2018</span><div><p class="what"><span class="en">BA in Economics</span><span class="pt">Bacharelado em Ciências Econômicas</span></p><p class="where">Universidade Federal Fluminense · <span class="en">Tutorial Education Program (PET) fellow, 2012–2014</span><span class="pt">bolsista do PET, 2012–2014</span></p></div></li>
+        <li><span class="when">2025 – 2026</span><div><p class="what"><span class="en">MSc in Economics (in progress)</span><span class="pt">Mestrado em Economia (em andamento)</span><span class="es">Maestría en Economía (en curso)</span></p><p class="where">Universidade Federal Fluminense — PPGE/UFF</p></div></li>
+        <li><span class="when">2019 – 2020</span><div><p class="what"><span class="en">Graduate specialization in Public Administration</span><span class="pt">Especialização em Administração Pública</span><span class="es">Especialización en Administración Pública</span></p><p class="where">Faculdade Única de Ipatinga (FUNIP)</p></div></li>
+        <li><span class="when">2012 – 2018</span><div><p class="what"><span class="en">BA in Economics</span><span class="pt">Bacharelado em Ciências Econômicas</span><span class="es">Licenciatura en Ciencias Económicas</span></p><p class="where">Universidade Federal Fluminense · <span class="en">Tutorial Education Program (PET) fellow, 2012–2014</span><span class="pt">bolsista do PET, 2012–2014</span><span class="es">becario del PET, 2012–2014</span></p></div></li>
       </ul>
     </section>
 
     <section id="toolkit" aria-labelledby="h-kit">
       <div class="sechead">
-        <span class="eyebrow en">Toolkit</span><span class="eyebrow pt">Ferramentas</span>
-        <h2 id="h-kit"><span class="en">Data, software and languages</span><span class="pt">Dados, software e idiomas</span></h2>
+        <span class="eyebrow en">Toolkit</span><span class="eyebrow pt">Ferramentas</span><span class="eyebrow es">Herramientas</span>
+        <h2 id="h-kit"><span class="en">Data, software and languages</span><span class="pt">Dados, software e idiomas</span><span class="es">Datos, software e idiomas</span></h2>
       </div>
       <div class="kit">
-        <div><h3><span class="en">Microdata</span><span class="pt">Microdados</span></h3><p>POF · PNAD Contínua · RAIS</p></div>
+        <div><h3><span class="en">Microdata</span><span class="pt">Microdados</span><span class="es">Microdatos</span></h3><p>POF · PNAD Contínua · RAIS</p></div>
         <div><h3>Software</h3><p>Stata · Excel · Power BI · LaTeX · R · Python · SQL</p></div>
-        <div><h3><span class="en">Languages</span><span class="pt">Idiomas</span></h3><p class="en">Portuguese (native) · English (advanced) · Spanish (advanced)</p><p class="pt">Português (nativo) · Inglês (avançado) · Espanhol (avançado)</p></div>
+        <div><h3><span class="en">Languages</span><span class="pt">Idiomas</span><span class="es">Idiomas</span></h3><p class="en">Portuguese (native) · English (advanced) · Spanish (advanced)</p><p class="pt">Português (nativo) · Inglês (avançado) · Espanhol (avançado)</p><p class="es">Portugués (nativo) · Inglés (avanzado) · Español (avanzado)</p></div>
       </div>
     </section>
 
     <section id="contact" aria-labelledby="h-contact">
       <div class="sechead">
-        <span class="eyebrow en">Contact</span><span class="eyebrow pt">Contato</span>
-        <h2 id="h-contact"><span class="en">Get in touch</span><span class="pt">Fale comigo</span></h2>
+        <span class="eyebrow en">Contact</span><span class="eyebrow pt">Contato</span><span class="eyebrow es">Contacto</span>
+        <h2 id="h-contact"><span class="en">Get in touch</span><span class="pt">Fale comigo</span><span class="es">Contáctame</span></h2>
       </div>
       <div class="contact">
-        <div class="mail"><span class="lbl"><span class="en">Academic</span><span class="pt">Acadêmico</span></span><code id="m1">lftcontreras@id.uff.br</code><button class="copy" type="button" id="copy-1" data-target="m1"><span class="en">Copy</span><span class="pt">Copiar</span></button></div>
-        <div class="mail"><span class="lbl"><span class="en">Personal</span><span class="pt">Pessoal</span></span><code id="m2">lftcontreras@gmail.com</code><button class="copy" type="button" id="copy-2" data-target="m2"><span class="en">Copy</span><span class="pt">Copiar</span></button></div>
+        <div class="mail"><span class="lbl"><span class="en">Academic</span><span class="pt">Acadêmico</span><span class="es">Académico</span></span><code id="m1">lftcontreras@id.uff.br</code><button class="copy" type="button" id="copy-1" data-target="m1"><span class="en">Copy</span><span class="pt">Copiar</span><span class="es">Copiar</span></button></div>
+        <div class="mail"><span class="lbl"><span class="en">Personal</span><span class="pt">Pessoal</span><span class="es">Personal</span></span><code id="m2">lftcontreras@gmail.com</code><button class="copy" type="button" id="copy-2" data-target="m2"><span class="en">Copy</span><span class="pt">Copiar</span><span class="es">Copiar</span></button></div>
       </div>
     </section>
   </main>
 
   <footer>
     <span class="en">Universidade Federal Fluminense · Faculdade de Economia · Niterói, RJ, Brazil · Updated October 2026</span>
-    <span class="pt">Universidade Federal Fluminense · Faculdade de Economia · Niterói, RJ · Atualizado em outubro de 2026</span>
+    <span class="pt">Universidade Federal Fluminense · Faculdade de Economia · Niterói, RJ · Atualizado em outubro de 2026</span><span class="es">Universidade Federal Fluminense · Facultad de Economía · Niterói, RJ · Actualizado en octubre de 2026</span>
   </footer>
 </div>
 
@@ -365,18 +368,20 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
   var root=document.documentElement;
   function setLang(l){
     root.setAttribute('data-lang',l);
-    root.setAttribute('lang',l==='pt'?'pt-BR':'en');
+    root.setAttribute('lang',l==='pt'?'pt-BR':l==='es'?'es':'en');
     document.getElementById('btn-en').setAttribute('aria-pressed',String(l==='en'));
     document.getElementById('btn-pt').setAttribute('aria-pressed',String(l==='pt'));
+    document.getElementById('btn-es').setAttribute('aria-pressed',String(l==='es'));
     try{localStorage.setItem('lftc-lang',l)}catch(e){}
   }
   var initial='en';
   var h=(location.hash||'').replace('#','');
-  if(h==='pt'||h==='en'){initial=h}
+  if(h==='pt'||h==='en'||h==='es'){initial=h}
   else{
     var saved=null;try{saved=localStorage.getItem('lftc-lang')}catch(e){}
-    if(saved==='pt'||saved==='en'){initial=saved}
+    if(saved==='pt'||saved==='en'||saved==='es'){initial=saved}
     else if((navigator.language||'').toLowerCase().indexOf('pt')===0){initial='pt'}
+    else if((navigator.language||'').toLowerCase().indexOf('es')===0){initial='es'}
   }
   setLang(initial);
   document.querySelectorAll('.lang button').forEach(function(b){
@@ -386,7 +391,7 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
     b.addEventListener('click',function(){
       var el=document.getElementById(b.getAttribute('data-target'));
       var txt=el.textContent;
-      function done(){var lbl=root.getAttribute('data-lang')==='pt'?'Copiado':'Copied';var old=b.innerHTML;b.textContent=lbl;setTimeout(function(){b.innerHTML=old},1600)}
+      function done(){var lbl=root.getAttribute('data-lang')==='en'?'Copied':'Copiado';var old=b.innerHTML;b.textContent=lbl;setTimeout(function(){b.innerHTML=old},1600)}
       function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
       try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
     });
