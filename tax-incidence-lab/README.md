@@ -4,7 +4,7 @@
 
 Ferramenta em Python para analisar a incidência distributiva de um tributo e de sua devolução. Relacionada à agenda de pesquisa de mestrado no PPGE/UFF sobre cashback, cesta básica e regressividade com a POF 2017–2018.
 
-**Estado da evidência:** este projeto oferece código verificável e um painel para carregar resultados. Não contém resultados empíricos da dissertação nem constitui sua replicação. As tabelas, o tratamento dos microdados e as regras dos cenários precisam ser incorporados para essa finalidade. Dados artificiais aparecem exclusivamente nos testes.
+**Estado da evidência:** este projeto oferece código verificável e um painel para carregar resultados. Não contém resultados empíricos da dissertação nem constitui sua replicação. As tabelas, o tratamento dos microdados e as regras dos cenários precisam ser incorporados para essa finalidade. Dados artificiais aparecem nos testes e no modo demonstrativo do painel, sempre identificados como fictícios.
 
 ## Executar
 
@@ -50,3 +50,13 @@ Os testes verificam Gini conhecido, proporcionalidade, imposto uniforme regressi
 ## Pesquisa
 
 [Portfólio](https://lftcontreras.github.io/) · [LinkedIn](https://www.linkedin.com/in/luisfelipecontreras/) · [ORCID](https://orcid.org/0009-0009-0387-0558)
+
+## Painel interativo
+
+Cinco abas: visão geral, distribuição e cashback, comparação de cenários, dados e exportação e metodologia. Inclui oito gráficos: carga por décimo, Kakwani, alívio em pontos percentuais, redução relativa, perfil da carga, composição do tributo inicial e duas comparações entre cenários.
+
+Use **Explorar exemplo fictício** para conhecer os gráficos sem carregar dados. O exemplo não contém estimativas empíricas nem Kakwani calculado. Para pesquisa, carregue o JSON do módulo. Guarde até quatro cenários na aba de comparação; a população, periodicidade e conceitos precisam ser comparáveis. O painel não permite combinar o exemplo marcado como fictício com arquivos sem essa marcação.
+
+A redução relativa é 100 × redução em pontos percentuais / carga inicial. Quando a carga inicial é zero, a razão fica indefinida. A composição mostra tributo líquido e devolvido como proporção do tributo inicial, não da renda. Não são calculados montantes, pobreza ou curvas de concentração a partir das dez cargas.
+
+A aba de dados exporta CSV delimitado por ponto e vírgula (com metadados), JSON e impressão pelo navegador, que pode ser salva como PDF. Os arquivos importados e cenários guardados ficam apenas na memória local da página; recarregar limpa a sessão.
