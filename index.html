@@ -180,6 +180,15 @@ h3.sub{font-family:var(--f-body);font-size:var(--s-1);font-weight:600;text-trans
 .copy:hover{border-color:var(--accent);color:var(--accent)}
 footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:400 var(--s-1)/1.6 var(--f-mono);color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){.lang button{transition:background .15s,color .15s}}
+.section-nav{display:flex;flex-wrap:wrap;gap:8px 22px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));gap:14px}
+.portfolio-card{border:1px solid var(--rule);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.portfolio-card h3{font-size:1.2rem}
+.portfolio-card p,.project-note p{text-align:start;hyphens:none}
+.portfolio-actions{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:auto;font-size:.9rem}
+.project-note{margin-top:12px}
+.project-note summary{color:var(--accent);cursor:pointer}
+.project-note p{margin-top:8px}
 </style>
 </head>
 <body>
@@ -215,6 +224,12 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
   </aside>
 
   <main>
+    <nav class="section-nav" aria-label="Sections / Seções / Secciones">
+      <a href="#research"><span class="pt">Pesquisa</span><span class="en">Research</span><span class="es">Investigación</span></a>
+      <a href="#research-tools"><span class="pt">Projetos</span><span class="en">Projects</span><span class="es">Proyectos</span></a>
+      <a href="#publications"><span class="pt">Produção</span><span class="en">Publications</span><span class="es">Producción</span></a>
+      <a href="#contact"><span class="pt">Contato</span><span class="en">Contact</span><span class="es">Contacto</span></a>
+    </nav>
     <div class="intro" id="about">
       <p class="lede en">I study who ends up paying for public policy in Brazil, with a focus on <em>indirect taxation</em>, inequality and the evaluation of social programs.</p>
       <p class="lede pt">Estudo quem de fato paga a conta das políticas públicas no Brasil, com foco em <em>tributação indireta</em>, desigualdade e avaliação de programas sociais.</p><p class="lede es">Estudio quién termina pagando las políticas públicas en Brasil, con énfasis en la <em>tributación indirecta</em>, la desigualdad y la evaluación de programas sociales.</p>
@@ -223,10 +238,24 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
     </div>
 
     <section id="research-tools" aria-labelledby="h-tools">
-      <div class="sechead"><h2 id="h-tools"><span class="en">Applied research tools</span><span class="pt">Ferramentas de pesquisa aplicada</span><span class="es">Herramientas de investigación aplicada</span></h2></div>
-      <p class="pt"><a href="tax-incidence-lab/">Laboratório de incidência tributária</a>: código Python testado, método documentado e painel para resultados agregados. Os resultados empíricos da dissertação ainda não estão incorporados.</p><p class="es"><a href="tax-incidence-lab/es.html">Laboratorio de incidencia tributaria</a>: código Python probado, metodología documentada y un panel de resultados agregados. Las estimaciones empíricas de la tesis aún no están incorporadas.</p>
-      <p class="en"><a href="tax-incidence-lab/en.html">Tax incidence lab</a>: tested Python code, documented methods and an aggregate-results dashboard. Dissertation estimates are not yet included.</p>
-      <p><a href="https://github.com/lftcontreras/lftcontreras.github.io/tree/main/tax-incidence-lab"><span class="en">Research code and documentation</span><span class="pt">Código e documentação de pesquisa</span><span class="es">Código y documentación de investigación</span></a></p>
+      <div class="sechead"><h2 id="h-tools"><span class="pt">Projetos em destaque</span><span class="en">Featured projects</span><span class="es">Proyectos destacados</span></h2></div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <h3><span class="pt">Cashback tributário e incidência</span><span class="en">Tax cashback and incidence</span><span class="es">Devolución e incidencia tributaria</span></h3>
+          <p><span class="pt">Uso a POF 2017–2018 e microssimulação para investigar quem se beneficia do cashback tributário.</span><span class="en">I use the 2017–2018 Household Budget Survey and microsimulation to study who benefits from tax cashback.</span><span class="es">Uso la POF 2017–2018 y la microsimulación para estudiar quién se beneficia de la devolución tributaria.</span></p>
+          <div class="portfolio-actions"><a class="pt" href="tax-incidence-lab/?demo=1">Testar demonstração</a> <a class="en" href="tax-incidence-lab/en.html?demo=1">Try demo</a> <a class="es" href="tax-incidence-lab/es.html?demo=1">Probar demostración</a> <a href="https://github.com/lftcontreras/lftcontreras.github.io/tree/main/tax-incidence-lab#readme"><span class="pt">Ler metodologia</span><span class="en">Read methods</span><span class="es">Leer metodología</span></a> <a href="https://github.com/lftcontreras/lftcontreras.github.io/tree/main/tax-incidence-lab"><span class="pt">Ver código</span><span class="en">View code</span><span class="es">Ver código</span></a></div>
+        </article>
+        <article class="portfolio-card">
+          <h3>Observatório UFF/SUDECO</h3>
+          <p><span class="pt">No Produto 3, contribuí para o levantamento da produção acadêmica e a análise de indicadores em Posse e Campos Belos, Cáceres e Corumbá.</span><span class="en">For Deliverable 3, I helped map academic research and analyze indicators for Posse and Campos Belos, Cáceres, and Corumbá.</span><span class="es">En el Producto 3, contribuí al relevamiento de la producción académica y al análisis de indicadores en Posse y Campos Belos, Cáceres y Corumbá.</span></p>
+          <div class="portfolio-actions"><a href="#nota-sudeco"><span class="pt">Ler nota metodológica</span><span class="en">Read methods note</span><span class="es">Leer nota metodológica</span></a></div>
+        </article>
+        <article class="portfolio-card">
+          <h3><span class="pt">Pesca Artesanal — UFF/MAPA</span><span class="en">Artisanal Fisheries — UFF/MAPA</span><span class="es">Pesca artesanal — UFF/MAPA</span></h3>
+          <p><span class="pt">Contribuo para a caracterização socioeconômica dos pescadores artesanais e para a revisão da literatura sobre o tema.</span><span class="en">I contribute to socioeconomic profiling of artisanal fishers and to the literature review.</span><span class="es">Contribuyo a la caracterización socioeconómica de los pescadores artesanales y a la revisión de la literatura.</span></p>
+          <div class="portfolio-actions"><a href="#nota-pesca"><span class="pt">Ler ficha metodológica</span><span class="en">Read methods brief</span><span class="es">Leer ficha metodológica</span></a></div>
+        </article>
+      </div>
     </section>
     <section id="research" aria-labelledby="h-research">
       <div class="sechead">
@@ -308,7 +337,7 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
           <span class="yr">2025</span>
           <div>
             <p class="pt-title">Disparidades salariais por gênero e raça no setor público brasileiro: evidências de “chão pegajoso” e “teto de vidro”</p>
-            <p><a href="https://www.anpec.org.br/encontro/2025/submissao/files_I/i13-c4df07831241826ca43e8efa232ce0e9.pdf"><span class="en">Read paper · ANPEC (PDF)</span><span class="pt">Ler trabalho · ANPEC (PDF)</span><span class="es">Leer trabajo · ANPEC (PDF)</span></a></p>
+            <p><a href="https://www.anpec.org.br/encontro/2025/submissao/files_I/i13-c4df07831241826ca43e8efa232ce0e9.pdf"><span class="en">Conference proceedings · ANPEC (PDF)</span><span class="pt">Publicado em anais · ANPEC (PDF)</span><span class="es">Publicado en actas · ANPEC (PDF)</span></a></p>
             <p class="auth">M. A. X. Silva, <b>L. F. T. Contreras</b>, D. C. Machado</p>
             <p class="venue"><span class="en">53rd Brazilian Economics Meeting (ANPEC), São Paulo</span><span class="pt">53º Encontro Nacional de Economia (ANPEC), São Paulo</span><span class="es">53.er Encuentro Nacional de Economía (ANPEC), São Paulo</span></p>
           </div>
@@ -338,6 +367,10 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
             <p class="desc en">Socioeconomic profiling of artisanal fishers using RGP, CadÚnico and PNAD Contínua microdata. Literature review using Embrapa Publications, screening and classification of documents, and contribution to the theoretical section of the report.</p>
             <p class="desc pt">Caracterização socioeconômica dos pescadores artesanais com microdados do RGP, do CadÚnico e da PNAD Contínua. Levantamento bibliográfico na Embrapa Publicações, triagem e classificação dos documentos e contribuição à seção teórica do relatório.</p>
             <p class="desc es">Caracterización socioeconómica de pescadores artesanales con microdatos del RGP, CadÚnico y la PNAD Contínua. Revisión bibliográfica en Embrapa Publicações, selección y clasificación de documentos y contribución a la sección teórica del informe.</p>
+            <details class="project-note" id="nota-pesca" open>
+              <summary><span class="pt">Ficha metodológica</span><span class="en">Methods brief</span><span class="es">Ficha metodológica</span></summary>
+              <p><span class="pt">O RGP informa o registro da atividade pesqueira. O CadÚnico permite descrever condições socioeconômicas das famílias cadastradas. A PNAD Contínua oferece contexto sobre trabalho e renda. Na revisão bibliográfica, uso a Embrapa Publicações para localizar, triar e classificar estudos sobre pesca artesanal.</span><span class="en">The RGP provides registration data. CadÚnico describes socioeconomic conditions among registered households. PNAD Contínua provides labor and income context. For the literature review, I use Embrapa Publications to find, screen, and classify studies on artisanal fishing.</span><span class="es">El RGP aporta datos de registro. CadÚnico describe las condiciones socioeconómicas de los hogares registrados. La PNAD Continua aporta contexto sobre trabajo e ingresos. En la revisión bibliográfica, uso Embrapa Publicações para localizar, seleccionar y clasificar estudios sobre pesca artesanal.</span></p>
+            </details>
           </div>
         </li>
         <li>
@@ -347,6 +380,10 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
             <p class="where"><span class="en">Observatory of public-policy indicators for intermediate cities in the Center-West (UFF/SUDECO)</span><span class="pt">Observatório de indicadores das políticas públicas das cidades intermediadoras do Centro-Oeste (UFF/SUDECO)</span><span class="es">Observatorio de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste (UFF/SUDECO)</span></p>
             <p class="desc en">Collection, processing and analysis of regional development indicators; co-author of the annual PNDR monitoring report and technical deliverables. For Deliverable 3, I helped map academic research and analyze indicators for Posse and Campos Belos, Cáceres, and Corumbá.</p>
             <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos. No Produto 3, contribuí para o levantamento da produção acadêmica e a análise de indicadores de Posse e Campos Belos, Cáceres e Corumbá.</p><p class="desc es">Recopilación, procesamiento y análisis de indicadores de desarrollo regional; coautor del informe anual de seguimiento de la PNDR y de informes técnicos. En el Producto 3, contribuí al relevamiento de la producción académica y al análisis de indicadores de Posse y Campos Belos, Cáceres y Corumbá.</p>
+            <details class="project-note" id="nota-sudeco" open>
+              <summary><span class="pt">Nota metodológica do Produto 3</span><span class="en">Deliverable 3 methods note</span><span class="es">Nota metodológica del Producto 3</span></summary>
+              <p><span class="pt">O levantamento organizou a produção acadêmica por território e tipo de documento. A análise comparou indicadores de desenvolvimento regional com base em dados oficiais. Minha contribuição abrangeu as Regiões Geográficas Imediatas de Posse e Campos Belos (GO), Cáceres (MT) e Corumbá (MS).</span><span class="en">The review organized academic output by territory and document type. The analysis compared regional development indicators using official data. My contribution covered the Immediate Geographic Regions of Posse and Campos Belos (GO), Cáceres (MT), and Corumbá (MS).</span><span class="es">El relevamiento organizó la producción académica por territorio y tipo de documento. El análisis comparó indicadores de desarrollo regional con datos oficiales. Mi contribución abarcó las Regiones Geográficas Inmediatas de Posse y Campos Belos (GO), Cáceres (MT) y Corumbá (MS).</span></p>
+            </details>
           </div>
         </li>
         <li>
@@ -382,7 +419,7 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
     <section id="education" aria-labelledby="h-edu">
       <div class="sechead">
         <span class="eyebrow en">Education</span><span class="eyebrow pt">Formação</span><span class="eyebrow es">Formación</span>
-        <h2 id="h-edu"><span class="en">Degrees</span><span class="pt">Títulos</span><span class="es">Títulos</span></h2>
+        <h2 id="h-edu"><span class="pt">Formação acadêmica</span><span class="en">Education</span><span class="es">Formación académica</span></h2>
       </div>
       <ul class="rows">
         <li><span class="when">2025 – 2026</span><div><p class="what"><span class="en">MSc in Economics (in progress)</span><span class="pt">Mestrado em Economia (em andamento)</span><span class="es">Maestría en Economía (en curso)</span></p><p class="where">Universidade Federal Fluminense — PPGE/UFF</p></div></li>
