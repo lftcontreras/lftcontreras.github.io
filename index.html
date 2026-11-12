@@ -104,6 +104,8 @@ img{max-width:100%}
 .name{font-size:var(--s3);font-weight:500;letter-spacing:-.01em}
 .role{color:var(--muted);font-size:.95rem}
 .loc{font:400 var(--s-1)/1.4 var(--f-mono);color:var(--muted);letter-spacing:.02em}
+.cv-links{display:flex;flex-wrap:wrap;gap:8px 12px}
+.cv-links a{display:inline-block;padding:5px 9px;border:1px solid var(--rule);border-radius:4px;font-size:.85rem}
 .ids{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
 .ids li{border-bottom:1px solid var(--rule)}
 .ids a{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;padding:9px 0;text-decoration:none;color:var(--ink)}
@@ -115,6 +117,7 @@ img{max-width:100%}
 /* Reading column */
 main{min-width:0;display:flex;flex-direction:column;gap:clamp(44px,6vw,64px)}
 .lede{font-family:var(--f-display);font-size:clamp(1.45rem,2.6vw,1.95rem);line-height:1.35;font-weight:400;max-width:34ch}
+.intro .lede{text-align:start;hyphens:none;-webkit-hyphens:none;text-wrap:balance}
 .lede em{font-style:italic;color:var(--accent)}
 .intro{display:flex;flex-direction:column;gap:18px}
 .intro p.body{max-width:65ch;color:var(--ink)}
@@ -197,6 +200,10 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
       <p class="role pt">Economista aplicado · Mestrando em Economia, PPGE/UFF</p><p class="role es">Economista aplicado · Estudiante de Maestría en Economía, PPGE/UFF</p>
     </div>
     <p class="loc">Niterói, RJ — Brazil · UTC−3</p>
+    <div class="cv-links">
+      <a href="curriculo-profissional.html" hreflang="pt-BR" lang="pt-BR">Currículo em português</a>
+      <a href="cv.html" hreflang="en" lang="en">CV in English</a>
+    </div>
     <ul class="ids">
       <li><a href="https://orcid.org/0009-0009-0387-0558" rel="me"><span class="k">ORCID</span><span class="v">0009-0009-0387-0558</span></a></li>
       <li><a href="https://scholar.google.com/citations?user=410-obMAAAAJ" rel="me"><span class="k">Google Scholar</span><span class="v">410-obMAAAAJ</span></a></li>
@@ -204,7 +211,6 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
       <li><a href="http://lattes.cnpq.br/1313195430227740" rel="me"><span class="k">Lattes</span><span class="v">1313195430227740</span></a></li>
       <li><a href="https://www.linkedin.com/in/luisfelipecontreras/" rel="me"><span class="k">LinkedIn</span><span class="v">/luisfelipecontreras</span></a></li>
       <li><a href="https://github.com/lftcontreras" rel="me"><span class="k">GitHub</span><span class="v">lftcontreras</span></a></li>
-      <li><a href="cv.html"><span class="k">CV</span><span class="v">English</span></a></li>
     </ul>
   </aside>
 
@@ -212,8 +218,8 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
     <div class="intro" id="about">
       <p class="lede en">I study who ends up paying for public policy in Brazil, with a focus on <em>indirect taxation</em>, inequality and the evaluation of social programs.</p>
       <p class="lede pt">Estudo quem de fato paga a conta das políticas públicas no Brasil, com foco em <em>tributação indireta</em>, desigualdade e avaliação de programas sociais.</p><p class="lede es">Estudio quién termina pagando las políticas públicas en Brasil, con énfasis en la <em>tributación indirecta</em>, la desigualdad y la evaluación de programas sociales.</p>
-      <p class="body en">I am an MSc candidate in Economics at the Graduate Program in Economics of Universidade Federal Fluminense (PPGE/UFF), advised by Prof. Fábio Domingues Waltenberg. My dissertation uses household-budget microsimulation to assess whether the tax cashback created by Brazil's 2023 tax reform can offset the regressivity of consumption taxes. I am also a research fellow at the UFF/SUDECO Observatory of public-policy indicators for intermediate cities in Brazil's Center-West, and previously worked on the evaluation of the National Program of Oriented Productive Microcredit (PNMPO). Before graduate school I worked in municipal budget planning and execution in Niterói.</p>
-      <p class="body pt">Sou mestrando em Economia no Programa de Pós-Graduação em Economia da Universidade Federal Fluminense (PPGE/UFF), sob orientação do Prof. Fábio Domingues Waltenberg. Minha dissertação usa microssimulação com dados de orçamento familiar para avaliar se o cashback criado pela Reforma Tributária de 2023 consegue compensar a regressividade dos tributos sobre o consumo. Também sou bolsista de pesquisa no Observatório UFF/SUDECO de indicadores de políticas públicas das cidades intermediadoras do Centro-Oeste e integrei a equipe de avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO). Antes da pós-graduação, trabalhei com planejamento e execução orçamentária na Prefeitura de Niterói.</p><p class="body es">Soy estudiante de Maestría en Economía en el Programa de Posgrado en Economía de la Universidade Federal Fluminense (PPGE/UFF), bajo la dirección del Prof. Fábio Domingues Waltenberg. Mi tesis utiliza microsimulación con datos de presupuestos familiares para evaluar si la devolución tributaria creada por la Reforma Tributaria de 2023 puede compensar la regresividad de los impuestos al consumo. También soy becario de investigación en el Observatorio UFF/SUDECO de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste y formé parte del equipo de evaluación del Programa Nacional de Microcrédito Productivo Orientado (PNMPO). Antes del posgrado, trabajé en planificación y ejecución presupuestaria en el Ayuntamiento de Niterói.</p>
+      <p class="body en">I am an MSc candidate in Economics at the Graduate Program in Economics of Universidade Federal Fluminense (PPGE/UFF), advised by Prof. Fábio Domingues Waltenberg. My dissertation uses household-budget microsimulation to assess whether the tax cashback created by Brazil's 2023 tax reform can offset the regressivity of consumption taxes. I was a research fellow at the UFF/SUDECO Observatory of public-policy indicators for intermediate cities in Brazil's Center-West, and previously worked on the evaluation of the National Program of Oriented Productive Microcredit (PNMPO). Before graduate school I worked in municipal budget planning and execution in Niterói.</p>
+      <p class="body pt">Sou mestrando em Economia no Programa de Pós-Graduação em Economia da Universidade Federal Fluminense (PPGE/UFF), sob orientação do Prof. Fábio Domingues Waltenberg. Minha dissertação usa microssimulação com dados de orçamento familiar para avaliar se o cashback criado pela Reforma Tributária de 2023 consegue compensar a regressividade dos tributos sobre o consumo. Fui bolsista de pesquisa no Observatório UFF/SUDECO de indicadores de políticas públicas das cidades intermediadoras do Centro-Oeste e integrei a equipe de avaliação do Programa Nacional de Microcrédito Produtivo Orientado (PNMPO). Antes da pós-graduação, trabalhei com planejamento e execução orçamentária na Prefeitura de Niterói.</p><p class="body es">Soy estudiante de Maestría en Economía en el Programa de Posgrado en Economía de la Universidade Federal Fluminense (PPGE/UFF), bajo la dirección del Prof. Fábio Domingues Waltenberg. Mi tesis utiliza microsimulación con datos de presupuestos familiares para evaluar si la devolución tributaria creada por la Reforma Tributaria de 2023 puede compensar la regresividad de los impuestos al consumo. Fui becario de investigación en el Observatorio UFF/SUDECO de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste y formé parte del equipo de evaluación del Programa Nacional de Microcrédito Productivo Orientado (PNMPO). Antes del posgrado, trabajé en planificación y ejecución presupuestaria en el Ayuntamiento de Niterói.</p>
     </div>
 
     <section id="research-tools" aria-labelledby="h-tools">
@@ -221,7 +227,6 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
       <p class="pt"><a href="tax-incidence-lab/">Laboratório de incidência tributária</a>: código Python testado, método documentado e painel para resultados agregados. Os resultados empíricos da dissertação ainda não estão incorporados.</p><p class="es"><a href="tax-incidence-lab/es.html">Laboratorio de incidencia tributaria</a>: código Python probado, metodología documentada y un panel de resultados agregados. Las estimaciones empíricas de la tesis aún no están incorporadas.</p>
       <p class="en"><a href="tax-incidence-lab/en.html">Tax incidence lab</a>: tested Python code, documented methods and an aggregate-results dashboard. Dissertation estimates are not yet included.</p>
       <p><a href="https://github.com/lftcontreras/lftcontreras.github.io/tree/main/tax-incidence-lab"><span class="en">Research code and documentation</span><span class="pt">Código e documentação de pesquisa</span><span class="es">Código y documentación de investigación</span></a></p>
-      <p><a href="curriculo-profissional.html">Currículo profissional · Português</a></p>
     </section>
     <section id="research" aria-labelledby="h-research">
       <div class="sechead">
@@ -292,6 +297,13 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
           </div>
         </li>
         <li>
+          <span class="yr">2026</span>
+          <div>
+            <p class="pt-title" lang="pt-BR">O custo temporal do deslocamento ao trabalho altera os diferenciais de remuneração por escolaridade? Evidências do Rio de Janeiro e de São Paulo<span class="tag en" lang="en">Accepted</span><span class="tag pt">Aceito</span><span class="tag es" lang="es">Aceptado</span></p>
+            <p class="venue"><span class="en">2nd Pan-American Meeting on the Economics of Education, UFF, Niterói</span><span class="pt">2º Encontro Panamericano de Economia da Educação, UFF, Niterói</span><span class="es">2.º Encuentro Panamericano de Economía de la Educación, UFF, Niterói</span></p>
+          </div>
+        </li>
+        <li>
           <span class="yr">2025</span>
           <div>
             <p class="pt-title">Disparidades salariais por gênero e raça no setor público brasileiro: evidências de “chão pegajoso” e “teto de vidro”</p>
@@ -318,12 +330,12 @@ footer{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px;font:4
       </div>
       <ul class="rows">
         <li>
-          <span class="when">2025 – <span class="en">present</span><span class="pt">atual</span><span class="es">actualidad</span></span>
+          <span class="when">2025 – 2026</span>
           <div>
             <p class="what"><span class="en">Research fellow</span><span class="pt">Bolsista de pesquisa</span><span class="es">Becario de investigación</span></p>
             <p class="where"><span class="en">Observatory of public-policy indicators for intermediate cities in the Center-West (UFF/SUDECO)</span><span class="pt">Observatório de indicadores das políticas públicas das cidades intermediadoras do Centro-Oeste (UFF/SUDECO)</span><span class="es">Observatorio de indicadores de políticas públicas de las ciudades intermedias del Centro-Oeste (UFF/SUDECO)</span></p>
-            <p class="desc en">Collection, processing and analysis of regional development indicators; co-author of the annual PNDR monitoring report and technical deliverables. For Deliverable 3, I help map academic research and analyze indicators for Posse and Campos Belos, Cáceres, and Corumbá.</p>
-            <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos. No Produto 3, contribuo para o levantamento da produção acadêmica e a análise de indicadores de Posse e Campos Belos, Cáceres e Corumbá.</p><p class="desc es">Recopilación, procesamiento y análisis de indicadores de desarrollo regional; coautor del informe anual de seguimiento de la PNDR y de informes técnicos. En el Producto 3, contribuyo al relevamiento de la producción académica y al análisis de indicadores de Posse y Campos Belos, Cáceres y Corumbá.</p>
+            <p class="desc en">Collection, processing and analysis of regional development indicators; co-author of the annual PNDR monitoring report and technical deliverables. For Deliverable 3, I helped map academic research and analyze indicators for Posse and Campos Belos, Cáceres, and Corumbá.</p>
+            <p class="desc pt">Levantamento, tratamento e análise de indicadores de desenvolvimento regional; coautor do relatório anual de monitoramento da PNDR e de relatórios técnicos. No Produto 3, contribuí para o levantamento da produção acadêmica e a análise de indicadores de Posse e Campos Belos, Cáceres e Corumbá.</p><p class="desc es">Recopilación, procesamiento y análisis de indicadores de desarrollo regional; coautor del informe anual de seguimiento de la PNDR y de informes técnicos. En el Producto 3, contribuí al relevamiento de la producción académica y al análisis de indicadores de Posse y Campos Belos, Cáceres y Corumbá.</p>
           </div>
         </li>
         <li>
